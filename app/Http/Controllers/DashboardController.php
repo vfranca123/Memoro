@@ -10,4 +10,8 @@ class DashboardController extends Controller
     public function index(){
         return view('login');
     }
+
+    public function homepage(){
+        return view('homePage');
+    }
 }
