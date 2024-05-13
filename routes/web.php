@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,6 @@ Route::post('/cadastrar/store',[CadastroController::class, 'store'])->name('Cada
 
 Route::get('/login/authenticate', [loginController::class, 'authenticate'])->name('login.authenticate');
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
-//Route::get('/sono/{user}', [SonoController::class, 'show'])->name('sono.show');
+
+Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
+

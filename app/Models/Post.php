@@ -9,8 +9,9 @@ class Post extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'comentario',
+        'content',
         'user_id',
+        'likes'
     ];
 
 
@@ -19,11 +20,20 @@ class Post extends Model
     }
 
     public function getImageURL(){
-        if($this->ftPerfil){
-            return asset("storage/{$this->ftPerfil->img}");
-        }
-        else{
+        if($this->foto){
+            return asset("storage/{$this->foto->img}");
+        }else{
             return 'https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario';
         }
+        
+    }
+
+    public function links($post){
+        return view('post.postCard',['post'=>$post]);
+    } 
+
+    public function getNome(){
+        $user = User::find($this->user_id);   
+        return $user->nome;
     }
 }

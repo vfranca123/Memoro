@@ -12,4 +12,6 @@ class Foto extends Model
         'post_id',
         'img'
     ];
+
+    
 }

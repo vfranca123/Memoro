@@ -24,7 +24,7 @@ class loginController extends Controller
             return redirect()->route('Homepage.index');
         }
 
-        return redirect()->route('index');
+        return redirect()->route('login');
     }
 
     public function logout()
