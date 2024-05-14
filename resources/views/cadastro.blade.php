@@ -5,7 +5,7 @@
         <img src="{{ url('storage/img/logo.png') }}" alt=" logo" class="card bg-black mt-2">
         <div class="container-sm w-50 ">
 
-            <form action="{{ route('Cadastro.store') }}" class="d-flex align-items-center justify-content-center flex-column "
+            <form action="{{ route('Cadastro.store') }}" class="d-flex align-items-center justify-content-center flex-column"
                 method="POST" enctype="multipart/form-data">
                 @csrf
 
@@ -32,10 +32,10 @@
                     <input type="password" class="form-control" aria-label="Sizing example input" name="senha"
                         aria-describedby="inputGroup-sizing-lg">
                 </div>
-                <input type="submit" class=" btn btn-warning m-4 " value="Cadastrar ">
+                <input type="submit" class="btn btn-warning m-4" value="Cadastrar">
             </form>
 
         </div>
-        <a href="{{ route('login') }}" class=" text-center">Entrar</a>
+        <a href="{{ route('login') }}" class="text-center">Entrar</a>
     </div>
 @endsection

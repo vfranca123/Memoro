@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\InventarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,6 @@ Route::get('/login/authenticate', [loginController::class, 'authenticate'])->nam
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 
 Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
+
+Route::get('/inventario', [InventarioController::class,'index'])->name('inventario.index');
 

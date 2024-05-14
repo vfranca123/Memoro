@@ -13,10 +13,20 @@
     <title>Memoro</title>
 </head>
 
-<body class="bg-secondary">
+<body class=" bg-secondary">
+
+    @include('layout.navBar')
+    @include('shared.flash')
 
     <div class="vh-100">
-        @yield('content')
+
+        <div class="d-flex">
+            @include('shared.leftSideBar')
+
+            <div class="m-4 container-sm bg-white rounded-4">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
 </body>

@@ -1,6 +1,6 @@
 @if (session()->has('flash'))
     <div class="container mt-4">
-        <div id="flashMessage" class="  alert alert-success alert-dismissible fade show " role="alert">
+        <div id="flashMessage" class="alert alert-success alert-dismissible fade show" role="alert">
             <div class="d-flex justify-content-between">
                 <strong>{{ session('flash') }}</strong>
                 <button type="button" class="btn btn-danger close-flash btn-sm" aria-label="Fechar">

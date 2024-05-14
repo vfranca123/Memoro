@@ -1,4 +1,4 @@
-<form action="{{route('Post.store')}}" method="POST" enctype="multipart/form-data" class="mt-4 col-md-10">
+<form action="{{ route('Post.store') }}" method="POST" enctype="multipart/form-data" class="mt-4 col-md-10">
     @csrf
     <div class="input-group input-group-lg">
         <span class="input-group-text rounded-0"><i class="fa-solid fa-pencil"></i></span>

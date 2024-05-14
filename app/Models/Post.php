@@ -23,7 +23,7 @@ class Post extends Model
         if($this->foto){
             return asset("storage/{$this->foto->img}");
         }else{
-            return 'https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario';
+            return '';
         }
         
     }
