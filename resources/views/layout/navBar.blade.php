@@ -8,7 +8,7 @@
             <a class="nav-link m-3" href="{{ route('Homepage.index') }}">
                 <h1 class="fa-solid fa-house text-light"></h1>
             </a>
-            <a class="nav-link m-3" href="{{ route('inventario.index') }}">
+            <a class="nav-link m-3" href="{{ route('inventario.index',Auth::id()) }}">
                 <h1 class="fa-solid fa-wallet text-light"></h1>
             </a>
             <a class="nav-link m-3" href="#">

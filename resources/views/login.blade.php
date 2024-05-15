@@ -1,6 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
+    @include('shared.flash')
     <div
         class="container-xl bg-black rounded-5 vh-100 mt-5 mb-5 d-flex align-items-center justify-content-center flex-column">
         <img src="{{url('storage/img/logo.png')}}" class="card bg-black" alt="logo">

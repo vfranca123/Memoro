@@ -32,8 +32,8 @@ class Post extends Model
         return view('post.postCard',['post'=>$post]);
     } 
 
-    public function getNome(){
+    public function getDono(){
         $user = User::find($this->user_id);   
-        return $user->nome;
+        return $user;
     }
 }

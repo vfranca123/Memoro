@@ -24,7 +24,7 @@ class PostController extends Controller
         $Post->save(); 
 
          // Verificar se uma imagem foi enviada no request
-         if ($request->hasFile('img')) {
+        if ($request->hasFile('img')) {
             // Armazenar a nova imagem
             $imagePath = request()->file('img')->store('Fotos', 'public');
             // Criar um novo registro de perfil de imagem

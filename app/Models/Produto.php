@@ -13,7 +13,6 @@ class produto extends Model
         'marca',
         'safra',
         'quantidade',
-        'img',
         'data',
         'avaliacao_geral',
         'nota_aroma',
@@ -23,5 +22,10 @@ class produto extends Model
         'observacao',
         'user_id'
     ];
+    
+    public function foto(){
+        return $this->hasOne(Foto::class,'post_id','id');       
+    }
+    
     use HasFactory;
-}
+}   

@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('marca');
             $table->string('safra');
             $table->integer('quantidade');
-            $table->string('img');
             $table->string('data');
             $table->integer('avaliacao_geral');
             $table->integer('nota_aroma');

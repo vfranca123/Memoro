@@ -19,7 +19,7 @@ class DashboardController extends Controller
         if(request()->has('seach')){
              $posts= $posts->where('content','like','%'.request()->get('seach').'%'); 
         }
-
+        
         return view('homePage',[
             'posts'=> $posts->paginate(5)
         ]);

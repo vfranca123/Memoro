@@ -21,7 +21,7 @@ class loginController extends Controller
 
             request()->session()->regenerate();
             
-            return redirect()->route('Homepage.index');
+            return redirect()->route('Homepage.index')->with('flash','login feito com sucesso');
         }
 
         return redirect()->route('login');
@@ -34,6 +34,6 @@ class loginController extends Controller
         request()->session()->invalidate(); // invalida os dados anteriores pra segurança
         request()->session()->regenerate(); // limpa a cache
 
-        return redirect()->route('login');
+        return redirect()->route('login')->with('flash','logout feito com sucesso');
     }
 }

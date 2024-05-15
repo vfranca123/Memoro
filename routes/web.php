@@ -18,7 +18,7 @@ use App\Http\Controllers\InventarioController;
 |
 */
 Route::get('/',[DashboardController::class, 'index'])->name('login');
-Route::get('/HomePage',[DashboardController::class, 'homepage'])->name('Homepage.index');
+Route::get('/HomePage',[DashboardController::class, 'homepage'])->name('Homepage.index')->middleware('auth');
 
 Route::get('/cadastrar',[CadastroController::class, 'index'])->name('Cadastro.index');
 Route::post('/cadastrar/store',[CadastroController::class, 'store'])->name('Cadastro.store');
@@ -28,5 +28,10 @@ Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 
 Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
 
-Route::get('/inventario', [InventarioController::class,'index'])->name('inventario.index');
+Route::get('/inventario/adicionarProduto/{id}', [InventarioController::class, 'storeIndex'])->name('inventario.adicionarProduto.index');
+Route::get('/inventario/{id}', [InventarioController::class, 'index'])->name('inventario.index');
+Route::post('/produto/store',[InventarioController::class,'store'])->name('produto.store');
+
+
+
 

@@ -3,8 +3,8 @@
     <p>ususário<p>
     
     <div class="container d-flex flex-column align-items-center">
-        <a href="{{route('inventario.index')}}" class="fs-5 text-decoration-none text-dark">Inventario</a>
-        <a href="#"class="mt-3 fs-5 text-decoration-none text-dark">Novas Entradas</a>
-        <a href="{{route('Homepage.index')}}"class="mt-3 fs-5 text-decoration-none text-dark">Sair</a>  
+        <a href="{{route('inventario.index',Auth::id())}}" class="fs-5 mt-3 text-decoration-none text-dark">Inventario</a>
+        <a href="{{ route('inventario.adicionarProduto.index', ['id' => Auth::id()]) }}" class="mt-5 fs-5 text-decoration-none text-dark">Novas Entradas</a>
+        <a href="{{route('Homepage.index')}}"class="mt-5 fs-5 text-decoration-none text-dark">Sair</a>  
     </div>
 </div>
