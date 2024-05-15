@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\produto;
 use App\Models\User;
-use App\Models\Foto;
+use App\Models\FotoProduto;
+use Illuminate\Support\Facades\Storage;
 
 class InventarioController extends Controller
 {
@@ -49,13 +50,13 @@ class InventarioController extends Controller
         // Salvando o produto no banco de dados
         $produto->save();
 
-        // Verificando se há uma imagem enviada no formulário
+            
         if ($request->hasFile('img')) {
             // Armazenar a nova imagem
-            $imagePath = $request->file('img')->store('Fotos', 'public');
-            // Criar um novo registro de foto associado ao produto
-            Foto::create([
-                'post_id' => $produto->id, // Associando a foto ao produto recém-criado
+            $imagePath = request()->file('img')->store('FotosProdutos', 'public');
+            // Criar um novo registro de perfil de imagem
+            FotoProduto::create([
+                'produto_id' => $produto->id,
                 'img' => $imagePath
             ]);
         }
@@ -63,4 +64,18 @@ class InventarioController extends Controller
         // Redirecionando de volta à página de inventário com uma mensagem flash
         return redirect()->route('inventario.index', ['id' => $user->id])->with('flash', 'Produto adicionado com sucesso!');
     }
+    public function destroy($id){
+        
+        $produto= produto::where('id',$id)->first();
+        $user_id=$produto->user_id;
+        
+        if ($produto->FotoProduto) {
+            // Deletar a imagem anterior e o registro correspondente
+            Storage::disk('public')->delete($produto->FotoProduto->img);
+            $produto->FotoProduto->delete();
+        } 
+        $produto->delete(); // é deletado este id 
+        return redirect()->route('inventario.index', ['id' => $user_id])->with('flash','produto deletado com sucesso'); //retorna a dashboard com um aviso da ideia deletada 
+    }
+    
 }

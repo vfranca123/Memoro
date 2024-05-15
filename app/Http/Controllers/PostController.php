@@ -36,6 +36,4 @@ class PostController extends Controller
         
         return redirect()->route('Homepage.index')->with('flash', 'Post feito com sucesso');
     }
-
-    
 }

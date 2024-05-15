@@ -31,6 +31,12 @@ Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
 Route::get('/inventario/adicionarProduto/{id}', [InventarioController::class, 'storeIndex'])->name('inventario.adicionarProduto.index');
 Route::get('/inventario/{id}', [InventarioController::class, 'index'])->name('inventario.index');
 Route::post('/produto/store',[InventarioController::class,'store'])->name('produto.store');
+Route::delete('/produto/{id}',[InventarioController::class, 'destroy'])->name('produto.destroy');
+
+Route::get('/teste', function(){
+    return view('teste');
+})->name('teste');
+
 
 
 

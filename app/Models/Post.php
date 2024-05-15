@@ -22,10 +22,7 @@ class Post extends Model
     public function getImageURL(){
         if($this->foto){
             return asset("storage/{$this->foto->img}");
-        }else{
-            return '';
-        }
-        
+        }      
     }
 
     public function links($post){

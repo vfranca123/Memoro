@@ -23,9 +23,15 @@ class produto extends Model
         'user_id'
     ];
     
-    public function foto(){
-        return $this->hasOne(Foto::class,'post_id','id');       
+    public function FotoProduto(){
+        return $this->hasOne(FotoProduto::class,'produto_id','id');       
     }
     
+    public function getImageURL(){
+        if($this->FotoProduto){
+            return asset("storage/{$this->FotoProduto->img}");
+        }
+        
+    }
     use HasFactory;
 }   

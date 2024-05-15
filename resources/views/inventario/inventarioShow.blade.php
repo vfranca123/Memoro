@@ -39,11 +39,20 @@
                     <h3 class="text-white">{{ $produto->avaliacao_geral }}<i class="fa-solid fa-star text-warning"></i></h3>
                 </div>
                 <div class="col-md-2 d-flex justify-content-around mt-2">
-                    <a href="#" class="fa-solid fa-pencil  text-decoration-none text-white fs-3"></a>
-                    <a href="#" class="fa-solid fa-trash text-decoration-none text-danger fs-3"></a>
+
+                    <button type="button" class="border-0 bg-secondary fa-solid fa-pencil text-white fs-3"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal{{ $produto->id }}">
+                    </button>
+                    @include('inventario.popOver',['produto' => $produto])
+
+                    <form method="POST" action="{{ route('produto.destroy',$produto->id) }}">
+                        @csrf
+                        @method('delete')
+                        <button
+                            class="border-0 bg-secondary fa-solid fa-trash text-decoration-none text-danger fs-3"></button>
+                    </form>
                 </div>
             </div>
         @endforeach
-
     </div>
 @endsection
