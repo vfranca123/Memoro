@@ -11,7 +11,7 @@
             <a class="nav-link m-3" href="{{ route('inventario.index',Auth::id()) }}">
                 <h1 class="fa-solid fa-wallet text-light"></h1>
             </a>
-            <a class="nav-link m-3" href="#">
+            <a class="nav-link m-3" href="{{route('perfil.index',Auth::id())}}">
                 <h1 class="fa-solid fa-user text-light"></h1>
             </a>
             <a class="nav-link m-3" href="{{ route('logout') }}">

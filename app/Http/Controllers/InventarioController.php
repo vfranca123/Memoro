@@ -64,6 +64,7 @@ class InventarioController extends Controller
         // Redirecionando de volta à página de inventário com uma mensagem flash
         return redirect()->route('inventario.index', ['id' => $user->id])->with('flash', 'Produto adicionado com sucesso!');
     }
+    
     public function destroy($id){
         
         $produto= produto::where('id',$id)->first();

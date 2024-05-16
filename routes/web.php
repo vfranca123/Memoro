@@ -6,6 +6,7 @@ use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\PerfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,9 @@ Route::get('/inventario/{id}', [InventarioController::class, 'index'])->name('in
 Route::post('/produto/store',[InventarioController::class,'store'])->name('produto.store');
 Route::delete('/produto/{id}',[InventarioController::class, 'destroy'])->name('produto.destroy');
 
-Route::get('/teste', function(){
-    return view('teste');
-})->name('teste');
+Route::get('/perfil/{id}',[PerfilController::class, 'index'])->name('perfil.index');
+Route::put('/perfil/{user}/update',[PerfilController::class, 'update'])->name('perfil.update');
+Route::get('/perfil/updateIndex/{user}',[PerfilController::class, 'updateIndex'])->name('perfil.updateIndex');
 
 
 

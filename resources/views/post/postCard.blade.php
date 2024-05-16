@@ -7,6 +7,8 @@
         <h2>{{ $post->getDono()->nome }}</h2>
         <p class="m-2 fs-3">{{ $post->content }}</p>
         <hr>
+
+        
         <img src="{{ $post->getImageURL() }}" class="card align-self-center" style="width: 15rem;" alt="foto">
         <hr>
         <form action="">

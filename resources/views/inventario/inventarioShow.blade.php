@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-md-2 d-flex justify-content-around mt-2">
 
-                    <button type="button" class="border-0 bg-secondary fa-solid fa-pencil text-white fs-3"
+                    <button type="button" class="border-0 bg-secondary text-white fs-3 fa-regular fa-clipboard"
                         data-bs-toggle="modal" data-bs-target="#exampleModal{{ $produto->id }}">
                     </button>
                     @include('inventario.popOver',['produto' => $produto])
