@@ -28,6 +28,7 @@ Route::get('/login/authenticate', [loginController::class, 'authenticate'])->nam
 Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 
 Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
+Route::delete('/post/destroy/{post}',[PostController::class, 'destroy'])->name('Post.destroy');
 
 Route::get('/inventario/adicionarProduto/{id}', [InventarioController::class, 'storeIndex'])->name('inventario.adicionarProduto.index');
 Route::get('/inventario/{id}', [InventarioController::class, 'index'])->name('inventario.index');

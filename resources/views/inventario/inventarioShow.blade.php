@@ -43,14 +43,16 @@
                     <button type="button" class="border-0 bg-secondary text-white fs-3 fa-regular fa-clipboard"
                         data-bs-toggle="modal" data-bs-target="#exampleModal{{ $produto->id }}">
                     </button>
-                    @include('inventario.popOver',['produto' => $produto])
+                    @include('inventario.popOver', ['produto' => $produto])
 
-                    <form method="POST" action="{{ route('produto.destroy',$produto->id) }}">
-                        @csrf
-                        @method('delete')
-                        <button
-                            class="border-0 bg-secondary fa-solid fa-trash text-decoration-none text-danger fs-3"></button>
-                    </form>
+                    @if (Auth::id() === $produto->user_id)
+                        <form method="POST" action="{{ route('produto.destroy', $produto->id) }}">
+                            @csrf
+                            @method('delete')
+                            <button
+                                class="border-0 bg-secondary fa-solid fa-trash text-decoration-none text-danger fs-3"></button>
+                        </form>
+                    @endif
                 </div>
             </div>
         @endforeach

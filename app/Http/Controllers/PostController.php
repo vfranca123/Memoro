@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Foto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -36,4 +37,15 @@ class PostController extends Controller
         
         return redirect()->route('Homepage.index')->with('flash', 'Post feito com sucesso');
     }
+    public function destroy(Post $post){
+         
+        if ($post->foto) {
+            // Deletar a imagem anterior e o registro correspondente
+            Storage::disk('public')->delete($post->foto->img);
+            $post->foto->delete();
+        } 
+        $post->delete(); // é deletado este id 
+        return redirect()->route('Homepage.index')->with('flash', 'Post deletado com sucesso');
+    }
+
 }
