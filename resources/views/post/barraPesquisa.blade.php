@@ -7,7 +7,7 @@
         <form method="GET">
             <input value="{{ request('seach', '') }}" placeholder="..." class="form-control w-100" type="text"
                 name="seach">{{-- ao clicar  no botão o conteudo escrito na input de nome seach sera enviado para a roate --}}
-            <button class="btn btn-warning m-4"> Pesquisar</button>
+            <button class="btn btn-primary m-4"> Pesquisar</button>
         </form>
 
     </div>

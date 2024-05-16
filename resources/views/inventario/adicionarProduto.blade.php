@@ -51,100 +51,130 @@
             </div>
 
             <h2 class="align-self-start m-3">Avaliação Geral:</h2>
-            <div class="col-md-4 d-flex align-self-start m-3 bg-secondary rounded-3">
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoGeral" value="1">
+            <div class="col-md-6 d-flex align-self-start m-3 bg-secondary rounded-3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">1-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoGeral" value="1">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoGeral" value="2">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">2-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoGeral" value="2">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoGeral" value="3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">3-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoGeral" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoGeral" value="4">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">4-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoGeral" value="4">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoGeral" value="5">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">5-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoGeral" value="5">
                 </div>
             </div>
 
             <h2 class="align-self-start m-3">Notas De Aroma:</h2>
-            <div class="col-md-4 d-flex align-self-start m-3 bg-secondary rounded-3">
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoAroma" value="1">
+            <div class="col-md-6 d-flex align-self-start m-3 bg-secondary rounded-3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">1-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoAroma" value="1">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoAroma" value="2">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">2-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoAroma" value="2">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoAroma" value="3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">3-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoAroma" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoAroma" value="4">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">4-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoAroma" value="4">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoAroma" value="5">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">5-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoAroma" value="5">
                 </div>
             </div>
 
-
             <h2 class="align-self-start m-3">Notas De Sabor:</h2>
-            <div class="col-md-4 d-flex align-self-start m-3 bg-secondary rounded-3">
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoSabor" value="1">
+            <div class="col-md-6 d-flex align-self-start m-3 bg-secondary rounded-3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">1-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoSabor" value="1">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoSabor" value="2">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">2-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoSabor" value="2">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoSabor" value="3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">3-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoSabor" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoSabor" value="4">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">4-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoSabor" value="4">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoSabor" value="5">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">5-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoSabor" value="5">
                 </div>
             </div>
 
             <h2 class="align-self-start m-3">Notas De Textura:</h2>
-            <div class="col-md-4 d-flex align-self-start m-3 bg-secondary rounded-3">
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoTextura" value="1">
+            <div class="col-md-6 d-flex align-self-start m-3 bg-secondary rounded-3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">1-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoTextura" value="1">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoTextura" value="2">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">2-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoTextura" value="2">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoTextura" value="3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">3-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoTextura" value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoTextura" value="4">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">4-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoTextura" value="4">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoTextura" value="5">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">5-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoTextura" value="5">
                 </div>
             </div>
 
             <h2 class="align-self-start m-3">Notas De Aparência:</h2>
-            <div class="col-md-4 d-flex align-self-start m-3 bg-secondary rounded-3">
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoaparencia" value="1">
+            <div class="col-md-6 d-flex align-self-start m-3 bg-secondary rounded-3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">1-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoaparencia"
+                        value="1">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoaparencia" value="2">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">2-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoaparencia"
+                        value="2">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoaparencia" value="3">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">3-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoaparencia"
+                        value="3">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoaparencia" value="4">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">4-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoaparencia"
+                        value="4">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input fs-2 m-1" type="radio" name="avaliacaoaparencia" value="5">
+                <div class="form-check d-flex">
+                    <p class="fs-2 text-light">5-</p>
+                    <input class="form-check-input fs-2 m-1 mt-2" type="radio" name="avaliacaoaparencia"
+                        value="5">
                 </div>
             </div>
+
 
 
             <h2 class="text-dark align-self-start mt-5">Observação:</h2>
