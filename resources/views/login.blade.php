@@ -10,13 +10,13 @@
             <form action="{{ route('login.authenticate') }}"
                 class="d-flex align-items-center justify-content-center flex-column">
                 @csrf
-                <h2 class="text-light align-self-start mt-5">Email:</h2>
+                <h2 class="text-light align-self-start mt-5">Email</h2>
                 <div class="input-group input-group-lg">
                     <input type="email" class="form-control" aria-label="Sizing example input" name="email"
                         aria-describedby="inputGroup-sizing-lg">
                 </div>
 
-                <h2 class="text-light align-self-start mt-5">Senha:</h2>
+                <h2 class="text-light align-self-start mt-5">Senha</h2>
                 <div class="input-group input-group-lg">
                     <input type="password" class="form-control" aria-label="Sizing example input" name="password"
                         aria-describedby="inputGroup-sizing-lg">

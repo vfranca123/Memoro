@@ -2,7 +2,7 @@
 
 @section('content')
     @include('layout.navBar')
-    @include('shared.flash ')
+    
     <div class="d-flex">
         <div class="p-2 w-100 d-flex justify-content-center bg-white h-50 mt-1 rounded-4">
             @include('post.fazerPost')
@@ -12,9 +12,8 @@
             @include('post.barraPesquisa')
         </div>
     </div>
-
+    @include('shared.flash ')
     
-
         <div class="p-2 w-100 d-flex align-items-center flex-column">
 
             @if (count($posts) > 0)

@@ -46,12 +46,11 @@
                     @include('inventario.popOver', ['produto' => $produto])
 
                     @if (Auth::id() === $produto->user_id)
-                        <form method="POST" action="{{ route('produto.destroy', $produto->id) }}">
-                            @csrf
-                            @method('delete')
-                            <button
-                                class="border-0 bg-secondary fa-solid fa-trash text-decoration-none text-danger fs-3"></button>
-                        </form>
+                        
+                        <button type="button" class="border-0 bg-secondary text-danger fs-3 fa-solid fa-trash "
+                            data-bs-toggle="modal"data-bs-target="#DeleteModal{{ $produto->id }}">
+                        </button>
+                        @include('inventario.PopOverDelete', ['produto' => $produto])
                     @endif
                 </div>
             </div>

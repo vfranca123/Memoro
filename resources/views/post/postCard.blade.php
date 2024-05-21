@@ -18,12 +18,11 @@
             </form>
            
             @if (Auth::id() === $post->user_id) 
-            
-                <form method="POST" action="{{ route('Post.destroy',$post) }}">
-                    @csrf
-                    @method('delete')
-                    <button class="border-0 bg-white text-decoration-none text-danger fs-3 m-2 mt-2"><i class="fa-solid fa-trash"></i></button>
-                </form>
+                <button type="button" class="border-0 bg-white text-danger fs-3 fa-solid fa-trash "
+                data-bs-toggle="modal"data-bs-target="#DeleteModal{{ $post->id }}">
+                </button>
+                @include('post.PopOverDelete', ['post' => $post])
+                
             @endif
         </div>
 
