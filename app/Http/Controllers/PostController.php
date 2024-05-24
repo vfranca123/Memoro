@@ -21,7 +21,6 @@ class PostController extends Controller
         $Post = new Post();
         $Post->user_id=auth()->id();// validando o usuario dono da ideia
         $Post->content=Request()->get('comentario','');
-        $Post->likes=0;
         $Post->save(); 
 
          // Verificar se uma imagem foi enviada no request
@@ -49,10 +48,17 @@ class PostController extends Controller
     }
 
     public function like(Post $post){
-        $post->likes++;
-        $post->update();
+        $liker=auth()->user();
+
+       $liker->likes()->attach($post);
+        return redirect()->route('Homepage.index');
+    }
+    public function unlike(Post $post){
+        $liker=auth()->user();
+
+       $liker->likes()->detach($post);
        
-        return redirect()->route('Homepage.index')->with('flash', 'like com sucesso');
+        return redirect()->route('Homepage.index');
     }
 
 }

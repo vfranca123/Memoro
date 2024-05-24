@@ -10,10 +10,12 @@ class Post extends Model
     use HasFactory;
     protected $fillable = [
         'content',
-        'user_id',
-        'likes'
+        'user_id'
     ];
 
+    public function likes(){
+        return $this->belongsToMany(User::class,'post_like');
+    }
 
     public function foto(){
         return $this->hasOne(Foto::class,'post_id','id');       

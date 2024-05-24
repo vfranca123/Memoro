@@ -67,5 +67,11 @@ class User extends Authenticatable
         return $this->hasMany(queijo::class,'user_id','id');
     }
 
-    
+    public function likes(){
+        return $this->belongsToMany(Post::class,'post_like');
+    }
+
+    public function likesPost(Post $post ){
+        return $this->likes()->where('post_id',$post->id)->exists();
+    }
 }

@@ -30,6 +30,7 @@ Route::get('/logout', [loginController::class, 'logout'])->name('logout');
 Route::post('/post/store',[PostController::class, 'store'])->name('Post.store');
 Route::delete('/post/destroy/{post}',[PostController::class, 'destroy'])->name('Post.destroy');
 Route::get('/post/like/{post}',[PostController::class,'like'])->name('Post.like');
+Route::get('/post/unlike/{post}',[PostController::class,'unlike'])->name('Post.unlike');
 
 Route::get('/inventario/adicionarProduto/{id}', [InventarioController::class, 'storeIndex'])->name('inventario.adicionarProduto.index');
 Route::get('/inventario/{id}', [InventarioController::class, 'index'])->name('inventario.index');
