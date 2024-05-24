@@ -13,7 +13,7 @@
         <img src="{{ $post->getImageURL() }}" class="card align-self-center" style="width: 15rem;" alt="foto">
         <hr>
         <div class="d-flex">
-            <form action="">
+            <form action="{{route('Post.like',$post)}}">
                 <button type="submit" class="border-0 bg-white fs-3 m-2"><i class="fa-regular fa-heart"></i></button>
             </form>
            

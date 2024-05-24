@@ -30,7 +30,7 @@ class produto extends Model
     public function getImageURL(){
         if($this->FotoProduto){
             return asset("storage/{$this->FotoProduto->img}");
-        }
+        } return null;
         
     }
     use HasFactory;

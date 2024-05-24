@@ -48,4 +48,11 @@ class PostController extends Controller
         return redirect()->route('Homepage.index')->with('flash', 'Post deletado com sucesso');
     }
 
+    public function like(Post $post){
+        $post->likes++;
+        $post->update();
+       
+        return redirect()->route('Homepage.index')->with('flash', 'like com sucesso');
+    }
+
 }

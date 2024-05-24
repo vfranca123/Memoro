@@ -33,4 +33,7 @@ class Post extends Model
         $user = User::find($this->user_id);   
         return $user;
     }
+
+    
+    
 }

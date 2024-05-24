@@ -4,7 +4,10 @@
     
     <div class="container d-flex flex-column align-items-center">
         <a href="{{route('inventario.index',Auth::id())}}" class="fs-5 mt-3 text-decoration-none text-dark">Inventario</a>
-        <a href="{{ route('inventario.adicionarProduto.index', ['id' => Auth::id()]) }}" class="mt-5 fs-5 text-decoration-none text-dark">Novas Entradas</a>
+        <button type="button" class="border-0 fs-5 mt-5 bg-white"
+            data-bs-toggle="modal"data-bs-target="#OpcoesModal{{ Auth::id() }}" >
+        Novas Entradas</button>
+        @include('inventario.popOverOpcoes', ['id' => Auth::id()])
         <a href="{{route('Homepage.index')}}"class="mt-5 fs-5 text-decoration-none text-dark">Sair</a>  
     </div>
 </div>
