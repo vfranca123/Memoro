@@ -5,6 +5,16 @@
         <img src="{{ url('storage/img/logo.png') }}" alt=" logo" class="card bg-black mt-2">
         <div class="container-sm w-50 ">
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form action="{{ route('Cadastro.store') }}" class="d-flex align-items-center justify-content-center flex-column"
                 method="POST" enctype="multipart/form-data">
                 @csrf

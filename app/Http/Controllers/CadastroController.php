@@ -16,16 +16,23 @@ class CadastroController extends Controller
 
     public function store()
     {
-        
-        $validated = request()->all();
-    
+
+        $validated = request()->validate(
+            [
+                'nome' => 'required|min:3',
+                'idade' => 'required',
+                'email' => 'required|email|unique:users,email',
+                'senha' => 'required'
+            ]
+        );
+
         User::create([
             'nome' => $validated['nome'],
             'idade' => $validated['idade'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['senha']),
         ]);
-    
+
         return redirect()->route('login');
     }
 }
