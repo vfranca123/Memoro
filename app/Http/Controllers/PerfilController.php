@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\post;
 
 class PerfilController extends Controller
 {
     public function index($id){
         $user = User::find($id);  
-        return view('perfil.PerfilShow',compact('user') );
+        $posts=post::orderBy('created_at', 'DESC');
+        $posts= $posts->where('user_id','like','%'.$id.'%'); 
+
+        return view('perfil.PerfilShow',
+        [
+            'user'=>$user,
+            'posts'=> $posts->paginate(5)
+        ]);
+        
     }
 
     public function update( User $user,Request $request){

@@ -118,7 +118,7 @@
             </div>
         @endforeach
 
-        
+
         @foreach ($queijos as $queijo)
             <div class="d-flex justify-content-between bg-warning ">
                 <div class="col-md-2">
@@ -150,5 +150,12 @@
                 </div>
             </div>
         @endforeach
+
+
     </div>
+    <button type="button" class="btn btn-primary m-4"
+        data-bs-toggle="modal"data-bs-target="#OpcoesModal{{ Auth::id() }}">
+        Novas Entradas</button>
+    @include('inventario.popOverOpcoes', ['id' => Auth::id()])
+    
 @endsection

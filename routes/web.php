@@ -7,6 +7,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\FolloweController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,8 @@ Route::get('/perfil/{id}',[PerfilController::class, 'index'])->name('perfil.inde
 Route::put('/perfil/{user}/update',[PerfilController::class, 'update'])->name('perfil.update');
 Route::get('/perfil/updateIndex/{user}',[PerfilController::class, 'updateIndex'])->name('perfil.updateIndex');
 
-
+Route::post('/users/{users_id}/follow',[FolloweController::class, 'follow'])->middleware('auth')->name('users.follow');
+Route::post('/users/{users_id}/unfollow',[FolloweController::class, 'unfollow'])->middleware('auth')->name('users.unfollow');
 
 
 

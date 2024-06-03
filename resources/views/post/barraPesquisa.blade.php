@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header pb-0 border-0">
-        <h5 class=""><i class="fa-solid fa-magnifying-glass"></i>Pesquisar</h5>
+        <h5 class=""><i class="fa-solid fa-magnifying-glass"></i>Pesquisar post</h5>
     </div>
     <div class="card-body">
 

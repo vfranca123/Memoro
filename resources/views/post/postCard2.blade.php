@@ -1,9 +1,4 @@
 <div class="d-flex">
-    <div class="p-2 d-flex flex-column align-items-center"><a
-            href="{{ route('perfil.index', $post->getDono()) }}"class=" fs-1 text-light fa-regular fa-user"></a>
-        <h2 class="m-2 text-light">{{ $post->getDono()->nome }}</h2>
-    </div>
-
     <div class="m-2 d-flex flex-column bg-white rounded" style="width: 40em;">
 
         <p class="m-2 fs-3">{{ $post->content }}</p>

@@ -18,7 +18,7 @@
 
             @if (count($posts) > 0)
                 @foreach ($posts as $post)
-                    {{-- Percorre as ideas e printa elas --}}
+                   
                     <div>
                         {{ $post->links($post) }}
                     </div>

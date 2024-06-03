@@ -30,6 +30,9 @@ class Post extends Model
     public function links($post){
         return view('post.postCard',['post'=>$post]);
     } 
+    public function links2($post){
+        return view('post.postCard2',['post'=>$post]);
+    } 
 
     public function getDono(){
         $user = User::find($this->user_id);   
