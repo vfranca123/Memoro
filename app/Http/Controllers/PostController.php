@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Foto;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
     public function store(Request $request){
+        $user = User::find(auth()->id());
         $validate= request()->validate([
             'comentario'=>'Required|min:1|max:250'
         ]);
@@ -20,6 +22,7 @@ class PostController extends Controller
         
         $Post = new Post();
         $Post->user_id=auth()->id();// validando o usuario dono da ideia
+        $Post->nomeAutor=$user->nome;
         $Post->content=Request()->get('comentario','');
         $Post->save(); 
 

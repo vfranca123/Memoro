@@ -16,9 +16,13 @@ class DashboardController extends Controller
 
         $posts=post::orderBy('created_at', 'DESC');
         
-        if(request()->has('seach')){
-             $posts= $posts->where('content','like','%'.request()->get('seach').'%'); 
+        if(request()->has('seachPerfil')){
+             $posts= $posts->where('nomeAutor','like','%'.request()->get('seachPerfil').'%'); 
         }
+
+        if(request()->has('seach')){
+            $posts= $posts->where('content','like','%'.request()->get('seach').'%'); 
+       }
         
         return view('homePage',[
             'posts'=> $posts->paginate(5)

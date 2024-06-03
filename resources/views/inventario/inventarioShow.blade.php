@@ -153,9 +153,12 @@
 
 
     </div>
-    <button type="button" class="btn btn-primary m-4"
+
+    @if (Auth::id() === $user->id)
+        <button type="button" class="btn btn-primary m-4"
         data-bs-toggle="modal"data-bs-target="#OpcoesModal{{ Auth::id() }}">
         Novas Entradas</button>
-    @include('inventario.popOverOpcoes', ['id' => Auth::id()])
+        @include('inventario.popOverOpcoes', ['id' => Auth::id()])
+    @endif
     
 @endsection
