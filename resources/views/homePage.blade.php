@@ -8,7 +8,7 @@
             @include('perfil.barraPesquisaPerfil')
         </div>
 
-        <div class="p-2 w-100 d-flex justify-content-center bg-white h-50 mt-1 rounded-4" style="width: 40em">
+        <div class="p-2 w-100 d-flex justify-content-center bg-white h-50 mt-1 rounded-4">
             @include('post.fazerPost')
         </div>
 
@@ -17,7 +17,7 @@
         </div>
     </div>
     
-        <div class="p-2 w-100 d-flex align-items-center flex-column">
+        <div class="d-flex align-items-center flex-column">
 
             @if (count($posts) > 0)
                 @foreach ($posts as $post)

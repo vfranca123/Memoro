@@ -44,41 +44,24 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabacos');
-    }
+        Schema::dropIfExists('tabacos'
 };
-/*
-Aparência:
-
-Cor: A uniformidade e o tom da cor do tabaco.
-Textura: A presença de veias e a consistência das folhas.
-Forma: A forma e o corte do tabaco.
-
-Aroma:
-
-Aroma antes da queima: O cheiro do tabaco antes de ser aceso, que pode incluir notas como terrosas, florais, frutadas, amadeiradas, etc.
-Aroma durante a queima: O cheiro do tabaco quando está queimando.
-
-Sabor:
-
-Sabor inicial: O primeiro impacto de sabor quando o tabaco é aceso.
-Complexidade: A variedade de sabores percebidos, como doce, amargo, ácido, picante, entre outros.
-Persistência: Quanto tempo o sabor permanece na boca após fumar.
-Equilíbrio: A harmonia entre os diferentes sabores percebidos.
-
-Queima:
-
-Uniformidade da queima: Se o tabaco queima de forma uniforme ou se apresenta "corredores" (partes que queimam mais rápido que outras).
-Velocidade da queima: A rapidez com que o tabaco queima.
-Resíduos de queima: A quantidade e a cor da cinza produzida.
-
-Sensação na boca:
-
-Macio ou áspero: A sensação do fumo na boca e garganta.
-Secura ou umidade: Se o fumo resseca a boca ou se deixa uma sensação úmida.
-
-Satisfação geral:
-
-Intensidade: A força do fumo, que pode ser leve, médio ou forte.
-Prazer: O nível geral de satisfação do fumante com a experiência.
-*/
+            id
+            string('nome');
+            tipo:string
+            quantidade:integer
+            cor:string
+            textura:string
+            corte:string
+            sabor_inicial:integer
+            complexidade:integer
+            persistência:integer
+            equilibrio:integer
+            uniformidade_da_queima:integer
+            velocidade_da_queima:integer
+            resíduos_de_queima:integer
+            sensação_na_boca:string
+            satisfação_geral:integer
+            data:string
+            observacao:string
+            user_id:foreignId
