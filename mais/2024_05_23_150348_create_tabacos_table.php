@@ -44,8 +44,24 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabacos');
-    
-    }
+        Schema::dropIfExists('tabacos'
 };
-           
+            id
+            string('nome');
+            tipo:string
+            quantidade:integer
+            cor:string
+            textura:string
+            corte:string
+            sabor_inicial:integer
+            complexidade:integer
+            persistência:integer
+            equilibrio:integer
+            uniformidade_da_queima:integer
+            velocidade_da_queima:integer
+            resíduos_de_queima:integer
+            sensação_na_boca:string
+            satisfação_geral:integer
+            data:string
+            observacao:string
+            user_id:foreignId
