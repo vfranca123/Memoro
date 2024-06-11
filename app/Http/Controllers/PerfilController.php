@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\post;
+use App\Models\Post;
 
 class PerfilController extends Controller
 {
     public function index($id){
-        $user = User::find($id);  
-        $posts=post::orderBy('created_at', 'DESC');
+        $user=User::find($id);  
+        $posts=Post::orderBy('created_at', 'DESC');
         $posts= $posts->where('user_id','like','%'.$id.'%'); 
 
         return view('perfil.PerfilShow',
