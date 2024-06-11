@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\post;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -14,7 +14,7 @@ class DashboardController extends Controller
 
     public function homepage(){
 
-        $posts=post::orderBy('created_at', 'DESC');
+        $posts=Post::orderBy('created_at', 'DESC');
         
         if(request()->has('seachPerfil')){
              $posts= $posts->where('nomeAutor','like','%'.request()->get('seachPerfil').'%'); 
