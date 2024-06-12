@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\produto;
+use App\Models\Produto;
 use App\Models\cafe;
 use App\Models\User;
 use App\Models\FotoTabaco;
