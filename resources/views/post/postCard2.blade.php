@@ -1,12 +1,12 @@
 <div class="d-flex">
-    <div class="card m-2 d-flex flex-column bg-white rounded"  style="width: 30rem;">
+    <div class="card m-2 d-flex flex-column bg-white rounded" style="width: 30rem;">
 
         <p class="m-2 fs-3">{{ $post->content }}</p>
-        <hr>
-
-
-        <img src="{{ $post->getImageURL() }}" class="card align-self-center" style="width: 15rem;" alt="foto">
-        <hr>
+        @if ($post->getImageURL())
+            <hr>
+            <img src="{{ $post->getImageURL() }}" class="card align-self-center" style="width: 15rem;" alt="foto">
+            <hr>
+        @endif
         <div class="d-flex m-2">
             @if (Auth::user()->likesPost($post))
                 <form action="{{ route('Post.unlike', $post) }}" class="d-flex flex-column m-2">

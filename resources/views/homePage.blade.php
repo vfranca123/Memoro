@@ -26,7 +26,7 @@
                     </div>
                 @endforeach
             @else
-                <h1 class="m-4 text-white">nem um post encontrado</h1>
+                <h1 class="m-4 text-white">nenhum post encontrado</h1>
             @endif
         </div>
 
