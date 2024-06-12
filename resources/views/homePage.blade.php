@@ -8,7 +8,7 @@
             @include('perfil.barraPesquisaPerfil')
         </div>
 
-        <div class="p-2 w-100 d-flex justify-content-center bg-white h-50 mt-1 rounded-4">
+        <div class="p-2 col-md-6">
             @include('post.fazerPost')
         </div>
 
@@ -21,7 +21,6 @@
 
             @if (count($posts) > 0)
                 @foreach ($posts as $post)
-                   
                     <div>
                         {{ $post->links($post) }}
                     </div>

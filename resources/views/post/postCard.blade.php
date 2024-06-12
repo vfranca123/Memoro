@@ -1,12 +1,11 @@
 <div class="d-flex">
     <div class="d-flex flex-column align-items-center"><a
             href="{{ route('perfil.index', $post->getDono()) }}"class=" fs-1 text-light fa-regular fa-user"></a>
-        <h2 class="text-light">{{ $post->getDono()->nome }}</h2>
     </div>
 
     <div class="d-flex">
-        <div class="m-2 d-flex flex-column bg-white rounded" style="width: 40em;">
-
+        <div class="card m-2 d-flex flex-column bg-white rounded"  style="width: 30rem;">
+            <h2 class="text-dark">{{ $post->getDono()->nome }}</h2>
             <p class="m-2 fs-3">{{ $post->content }}</p>
             <hr>
 

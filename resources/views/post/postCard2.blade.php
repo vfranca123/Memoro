@@ -1,5 +1,5 @@
 <div class="d-flex">
-    <div class="m-2 d-flex flex-column bg-white rounded" style="width: 40em;">
+    <div class="card m-2 d-flex flex-column bg-white rounded"  style="width: 30rem;">
 
         <p class="m-2 fs-3">{{ $post->content }}</p>
         <hr>

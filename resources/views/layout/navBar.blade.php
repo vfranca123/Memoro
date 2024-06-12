@@ -1,7 +1,7 @@
 <nav class="navbar bg-black">
 
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="{{ url('storage/img/logo.png') }}" class="card bg-black"
+        <a class="navbar-brand" href="#"><img src="{{ url('storage/img/logo.png') }}" class=" bg-black"
                 alt="Logo"></a>
 
         <div class="col-md-3 d-flex flex-row">

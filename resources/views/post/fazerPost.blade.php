@@ -1,8 +1,7 @@
-<form action="{{ route('Post.store') }}" method="POST" enctype="multipart/form-data" class="d-flex flex-column mt-4 col-md-12">
+<form action="{{ route('Post.store') }}" method="POST" enctype="multipart/form-data" class="card d-flex flex-column">
     @csrf
     <div class="input-group input-group-xl">
-        <span class="input-group-text rou border-primary"><i class="fa-solid fa-pencil"></i></span>
-        <input type="text" class="form-control rounded-end border-primary" name="comentario">
+        <input type="text" class="form-control w-100" name="comentario" placeholder="conteudo do post...">
     </div>
     
     <label for="photoInput" class="btn">
