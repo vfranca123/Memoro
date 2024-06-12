@@ -24,7 +24,7 @@ class PerfilController extends Controller
 
     public function update( User $user,Request $request){
         $validated = $request->validate([
-            'nome' => 'required',
+            'nome' => 'required|max:26|alpha',
             'senha' => 'required'
         ]);
 
