@@ -39,7 +39,7 @@ class InventarioController extends Controller
         $user = auth()->user(); // Capturando o usuário autenticado
 
         // Criando uma nova instância do modelo Produto
-        $produto = new Produto();
+        $produto = new produto();
 
         // Preenchendo os campos do produto com os dados do formulário
         $produto->user_id = $user->id; // Definindo o ID do usuário
