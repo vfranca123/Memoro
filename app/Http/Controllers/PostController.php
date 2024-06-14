@@ -25,12 +25,24 @@ class PostController extends Controller
         $Post->nomeAutor=$user->nome;
         $Post->content=Request()->get('comentario','');
         $Post->save(); 
-
+        
          // Verificar se uma imagem foi enviada no request
         if ($request->hasFile('img')) {
             // Armazenar a nova imagem
             $imagePath = request()->file('img')->store('Fotos', 'public');
             // Criar um novo registro de perfil de imagem
+            
+            Foto::create([
+                'post_id' => $Post->id,
+                'img' => $imagePath
+            ]);
+        }
+
+        if ($request->hasFile('camera')) {
+            // Armazenar a nova imagem
+            $imagePath = request()->file('camera')->store('Fotos', 'public');
+            // Criar um novo registro de perfil de imagem
+            
             Foto::create([
                 'post_id' => $Post->id,
                 'img' => $imagePath
